@@ -118,7 +118,8 @@ def status():
         return
     
     last_rec = recs[-1]
-    print(f"Current Status\n{last_rec.type.name} - {last_rec.timestamp.humanize()}")
+    timediff = last_rec.timestamp.humanize(granularity=["hour", "minute"])
+    print(f"Current Status\n{last_rec.type.name} - {timediff}")
     
 
 if __name__ == "__main__":
